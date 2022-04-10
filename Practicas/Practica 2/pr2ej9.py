@@ -156,11 +156,4 @@ for x, fila in enumerate(mapa):
                                     res[x][y] = res[x][y] + 1
         else:
             res[x][y] = "*"
-# for x, fila in enumerate(mapa):
-#     for y, elem in enumerate(fila):
-#         if x == 0:
-#             res[x][y] =  res[x][y] +1
-
-
-
 print (res)
