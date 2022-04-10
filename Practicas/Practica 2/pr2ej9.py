@@ -23,13 +23,86 @@
 # Nota: Defina al menos una función en el código (si hay mas mejor) y documente las mismas con
 # docstring que es lo que hacen.
 
-# [
-# '-*-*-',
-# '--*--',
-# '----*',
-# '*----',
-# ]
 
-from gettext import find
 
-mapa=['-*-*-','--*--','----*','*----',]
+mapa = ['-*-*-','--*--','----*','*----']
+
+res = ["asdfg","qwert","yuiop","zxcvb"]
+
+for x, fila in enumerate(mapa):
+    for y, elem in enumerate(fila):
+
+        if (elem == "-"):
+
+            if (x > 0) and (y > 0) and (x < len(mapa)) and (y < len(fila)):
+
+                if (mapa[x+1][y+1] == "*"):
+                    print (res[x][y])
+
+                if (mapa[x-1][y-1] == "*"):
+                    print (res[x][y])
+
+                if (mapa[x][y+1] == "*"):
+                    print (res[x][y])
+
+                if (mapa[x][y-1] == "*"):
+                    print (res[x][y])
+
+                if (mapa[x+1][y] == "*"):
+                    print (res[x][y])
+
+                if (mapa[x-1][y] == "*"):
+                    print (res[x][y])
+
+                if (mapa[x-1][y+1] == "*"):
+                    print (res[x][y])
+                    
+                if (mapa[x+1][y-1] == "*"):
+                    print (res[x][y])
+                
+
+            else:
+                if (x == 0):
+                    if (y > 0) and (y < len(fila)):
+                        if (mapa[x][y-1] == "*"):
+                            print (res[x][y])
+                        if (mapa[x+1][y-1] == "*"):
+                            print (res[x][y])
+                        if (mapa[x][y+1] == "*"):
+                            print (res[x][y])
+                        if (mapa[x+1][y+1] == "*"):
+                            print (res[x][y])
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            # if mapa[x][y+1] == "*":
+            #     res[x][y] =1
+
+            # if mapa[x-1][y] == "*":
+            #     res[x][y] =1
+
+            # if mapa[x+1][y] == "*":
+            #     res[x][y] =1
+
+            # if mapa[x+1][y+1] == "*":
+            #     res[x][y] =1
+
+            # if mapa[x-1][y-1] == "*":
+            #     res[x][y] =res[x][y]+ 1
+                
+#         else:   
+#             res[][] = "*"
+                
+
